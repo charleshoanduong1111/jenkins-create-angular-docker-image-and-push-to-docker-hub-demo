@@ -1,5 +1,4 @@
 node {    
-      //https://medium.com/swlh/jenkins-pipeline-to-create-docker-image-and-push-to-docker-hub-721919512f2
       def app     
       stage('Clone repository') {               
              
