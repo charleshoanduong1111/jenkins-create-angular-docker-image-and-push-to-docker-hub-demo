@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
-                def app = docker.build("charleshoanduong1111/angular-docker-image") 
+                docker.build("charleshoanduong1111/angular-docker-image") 
             }
         }
         stage('Deliver') {
