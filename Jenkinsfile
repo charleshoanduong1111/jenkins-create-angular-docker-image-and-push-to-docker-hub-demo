@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    def app 
     tools {nodejs "node"}
     stages {
 		stage('Clone repository') {               
@@ -9,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'npm install'
-                app = docker.build("charleshoanduong1111/angular-docker-image") 
+                def app = docker.build("charleshoanduong1111/angular-docker-image") 
             }
         }
         stage('Deliver') {
